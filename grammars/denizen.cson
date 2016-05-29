@@ -1,0 +1,93 @@
+'scopeName': 'source.yml'
+'name': 'Denizen'
+'fileTypes': ['yml', 'yaml']
+
+#You must double each backslash you make in regexes.
+
+'patterns': [
+    {
+        'match': '(#\\s\\+\\-.+|#\\s\\|.+)'
+        'name': 'comment.header.denizen'
+    },
+    {
+        'match': '#.+'
+        'name': 'comment.line.denizen'
+    },
+    {
+        'match': '^[^\\s?].+?:'
+        'name': 'scriptname.denizen'
+    },
+    {
+        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+        'name': 'constant.numeric.denizen'
+    },
+    {
+        'match': '\\t'
+        'name': 'tabulator.denizen'
+    },
+    {
+        'begin': '\\    on '
+        'end': '\\:'
+        'name': 'events.denizen'
+    },
+    {
+        'match': '<[^ :]+>'
+        'name': 'tags.denizen'
+
+     },
+#    {
+#        'match': '<[^ :]+>'
+#        'name': 'tags.denizen'
+#    },
+    {
+        'match': '/\\[([^\\]]+)]/'
+        'name': 'brackets.denizen'
+    },
+    {
+        'begin': '\\  \\w+'
+        'end': '\\:'
+        'name': 'injections.denizen'
+    },
+    {
+        'match': '(\\:-&gt;:|\\:&lt;-:|\\+|\\+\\+|\\*|\\/|\\!|\\!|\\=)'
+        'name': 'math.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)queue clear|\\- (\\^|)determine cancelled|\\- (\\^|)determine passively cancelled|\\- (\\^|)wait|targets:|\\- (\\^|)take)'
+        'name': 'command.destructive.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)define \\w+|\\%.+?\\%)'
+        'name': 'command.define.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)inject \\w+|\\- (\\^|)run \\w+|inject locally \\w+)'
+        'name': 'command.run.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)determine|\\- (\\^|)define|\\- (\\^|)yaml id:|\\- (\\^|)execute|\\- (\\^|)give|\\- (\\^|)teleport|\\- (\\^|)flag|\\- (\\^|)finish|\\- (^|)fail|\\- (\\^|)log|\\- (\\^|)new|\- (\\^|)run|\- (\\^|)zap|\- (\\^|)queue|\- (\\^|)wait|\- (\\^|)narrate|\- (\\^|)adjust|\- (\\^|)inventory)'
+        'name': 'command.core.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)yaml create id:|\\- (\\^|)yaml|\\id:)'
+        'name': 'command.yaml.create.denizen'
+    },
+    {
+        'match': '(\\} else {|\\} else if )'
+        'name': 'statement.else.denizen'
+    },
+    {
+        'match': '(\\- (\\^|)if|\\- (\\^|)repeat|\\- (\\^|)random|\\=\\=|\\!\\=|\\&\\&|\\|\\||\\&gt;\\s|\\&lt;\\s|\\{|\\}|\\- (\\^|)foreach)'
+        'name': 'statement.if.denizen'
+    },
+    {
+        'begin': '\''
+        'end': '\''
+        'name': 'string.quoted.single.denizen'
+    },
+    {
+        'begin': '\"'
+        'end': '\"'
+        'name': 'string.quoted.double.denizen'
+    }
+]
