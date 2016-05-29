@@ -8,10 +8,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkLyck/Denizen-Atom"
+    "url": "https://github.com/MarkLyck/denizen-atom"
   },
   "bugs": {
-    "url": "https://github.com/MarkLyck/Denizen-Atom/issues"
+    "url": "https://github.com/MarkLyck/denizen-atom/issues"
   },
   "license": "MIT"
 }
